@@ -12,17 +12,31 @@ import com.cajanegra.EmptyCollectionException;
 public class MayorLongitudTest {
 
     static Editor editor;
-    
-	@BeforeEach
-	void init() {
-		editor = new Editor();
-		editor.leerFichero("fichero.txt");	 // el fichero tiene 6 líneas
-	}  
 	
 	@Test
 	void Test1() throws EmptyCollectionException{
-	    assertEquals("FERNANDEZ", editor.mayorLongitud());
+		editor = new Editor();
+	    assertEquals(null, editor.mayorLongitud());
 	}
 	
+	@Test
+	void Test4() throws EmptyCollectionException{
+		editor = new Editor();
+		editor.leerFichero("ficheroConUnaPalabra.txt");
+	    assertEquals("HOLA", editor.mayorLongitud());
+	}
 	
+	@Test
+	void Test5() throws EmptyCollectionException{
+		editor = new Editor();
+		editor.leerFichero("ficheroCamino5.txt");
+	    assertEquals("ADIOS", editor.mayorLongitud());
+	}
+	
+	@Test
+	void Test6() throws EmptyCollectionException{
+		editor = new Editor();
+		editor.leerFichero("ficheroCamino6.txt");
+	    assertEquals("ADIOS", editor.mayorLongitud());
+	}
 }

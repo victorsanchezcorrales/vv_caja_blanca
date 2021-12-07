@@ -45,12 +45,12 @@ public class NumPalabrasTest {
 	}
 	
 	@Test
-	void Test5(){
+	void Test6(){
 	    assertEquals(0, editor.numPalabras(4, 5, "FERNANDO"));
 	}
 	
 	@Test
-	void Test6(){
+	void Test7(){
 	    assertEquals(1, editor.numPalabras(4, 5, "ALONSO"));
 	}
 }

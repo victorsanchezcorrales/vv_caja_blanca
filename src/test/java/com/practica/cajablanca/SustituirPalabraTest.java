@@ -1,5 +1,6 @@
 package com.practica.cajablanca;
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Disabled;
@@ -16,9 +17,9 @@ public class SustituirPalabraTest {
 	@Test
 	void Test1() throws EmptyCollectionException{
 		editor = new Editor();
-		Editor editorAux = new Editor();
 	    editor.sustituirPalabra("HOLA","ADIOS");
-	    assert(editor.editIsEmpty());
+	    assertTrue(editor.editIsEmpty());
+	    assertEquals(0, editor.size());
 	}
     
     @DisplayName("Camino 2")

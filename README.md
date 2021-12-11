@@ -10,6 +10,12 @@ GRUPO 1 IWT-42
 
 - También puede utilizar los comandos con el plugin de su IDE. En Eclipse: ```Run > Run Configurations… ``` 
 
+- Para poder utilizar Maven para ejecutar los test debe instalar la dependencia del ```SingleList.jar```. Para ello, configure la ejecución de Maven añadiendo en Goals: 
+```
+install:install-file -Dfile=/MY/PATH/SingleList.jar -DgroupId=com.singleList -DartifactId=SingleList -Dversion=0.0.1-SNAPSHOT -Dpackaging=jar
+``` 
+Reemplazando ```/MY/PATH``` por la ruta donde se encuentre el fichero en su equipo.
+
 ### Ejecutar los test ⚙️
 
 - Para compilar y ejecutar los test use el comando:
@@ -18,15 +24,11 @@ mvn test
 ```
 - Para ejecutar los test de una determinada clase utilice ```mvn -Dtest=<nombre clase> test```. Por ejemplo:
 ```
-mvn test -Dtest=RemoveLastTest test
-```
-- Para ejecutar los test de varias clases a la vez utilice ```mvn -Dtest=<nombre clase>, <nombre clase> test```. Por ejemplo:
-```
-mvn test -Dtest=RemoveLastTest, RemoveLastElemTest test 
+mvn test -Dtest=MayorLongitudTest test
 ```
 - Para ejecutar los test de un determinado método utilice ```mvn -Dtest=<nombre clase>#<nombre metodo> test```. Por ejemplo:
 ```
-mvn test -Dtest=RemoveLastTest#removeLastTest2 test 
+mvn test -Dtest=MayorLongitudTest#Test4 test 
 ```
 ### Generar informes 📄
 - Al ejecutar los test se generan informes en formato ```.txt``` y ```.xml``` en ```.target/surefire-reports```

@@ -62,7 +62,7 @@ public class MayorLongitudTest {
 	void Test7() throws EmptyCollectionException{
 		editor = new Editor();
 		editor.leerFichero("fichero.txt");
-	    assertEquals("FERNANDEZ", editor.mayorLongitud());
+	    assertEquals("MENESES", editor.mayorLongitud());
 	}
 	
 }

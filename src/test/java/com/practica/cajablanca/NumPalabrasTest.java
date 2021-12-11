@@ -60,12 +60,12 @@ public class NumPalabrasTest {
     @DisplayName("Camino 6")
 	@Test
 	void Test6(){
-	    assertEquals(0, editor.numPalabras(4, 5, "FERNANDO"));
+	    assertEquals(0, editor.numPalabras(4, 5, "ALONSO"));
 	}
 	
     @DisplayName("Camino 7")
 	@Test
 	void Test7(){
-	    assertEquals(1, editor.numPalabras(4, 5, "ALONSO"));
+	    assertEquals(1, editor.numPalabras(4, 5, "NUÑEZ"));
 	}
 }
